@@ -1,0 +1,82 @@
+import tkinter as tk
+from tkinter import filedialog
+import re
+import os
+from collections import defaultdict
+
+def categorize_email(email):
+    """Categorize email based on provider."""
+    email = email.strip().lower()
+    if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
+        return 'invalid'
+    
+    domain = email.split('@')[1]
+    
+    if domain in ['gmail.com']:
+        return 'gmail'
+    elif domain in ['godaddy.com']:
+        return 'godaddy'
+    elif domain in ['yahoo.com', 'ymail.com']:
+        return 'yahoo'
+    elif domain in ['aol.com']:
+        return 'aol'
+    elif domain in ['icloud.com', 'me.com', 'mac.com']:
+        return 'icloud'
+    elif 'live.' in domain or domain in ['outlook.com', 'hotmail.com']:
+        return 'outlook_personal'
+    elif domain in ['onmicrosoft.com']:
+        return 'outlook_business'
+    return 'other'
+
+def sort_emails(input_file):
+    """Read emails from file and sort them into categories."""
+    email_categories = defaultdict(list)
+    
+    try:
+        with open(input_file, 'r', encoding='utf-8') as file:
+            for line in file:
+                email = line.strip()
+                if email:
+                    category = categorize_email(email)
+                    email_categories[category].append(email)
+                    
+        return email_categories
+    except Exception as e:
+        return {'error': [str(e)]}
+
+def save_sorted_emails(email_categories, output_dir):
+    """Save sorted emails to separate files in the output directory."""
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    for category, emails in email_categories.items():
+        if emails and category != 'error':
+            output_file = os.path.join(output_dir, f'{category}_emails.txt')
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write('\n'.join(emails))
+    
+    if 'error' in email_categories:
+        output_file = os.path.join(output_dir, 'errors.txt')
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(email_categories['error']))
+
+def select_file():
+    """Open file dialog and process the selected file."""
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+    
+    file_path = filedialog.askopenfilename(
+        title="Select Email List File",
+        filetypes=[("Text files", "*.txt"), ("All files", "*.*")]
+    )
+    
+    if file_path:
+        output_dir = os.path.join(os.path.dirname(file_path), 'sorted_emails')
+        email_categories = sort_emails(file_path)
+        save_sorted_emails(email_categories, output_dir)
+        print(f"Emails sorted and saved to {output_dir}")
+    else:
+        print("No file selected.")
+
+if __name__ == "__main__":
+    select_file()
