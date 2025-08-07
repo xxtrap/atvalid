@@ -1,0 +1,24 @@
+
+
+its too slow 
+C:\Users\Administrator\Desktop\avalidator>py 2valid.py
+
+🚀 Validating 8 emails using 4 silent threads...
+
+❓ nandersen@kameddata.com [exception]
+❓ mark@lenthor.com [exception]
+❓ kirti.shah@uciny.com [exception]
+❓ trudy@drbronner.com [exception]
+
+
+
+
+if it doesnt redirect and remains on this page its X invalid
+
+https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=638901450244029013.NzhhMzkyMTMtMzY4MC00OTU1LWI5NDktMTU2OWZhNDBjNDdkNDI2OGY3OWMtODEzMS00YmZiLWEzNDUtMTY2OTg0Nzk4ZGVk&ui_locales=en-US&mkt=en-US&client-request-id=17512ed9-3a0f-4a98-9789-48e83a6b6cf0&state=qv2n7qEKCiCO8mC2VOHanrgNQAD3QVKSx4NmxFUuZC6nBp-7lyWYhTX1c2eNwqnmNI6EG8-ju0BJRnwRbBOozpUYpxTw-CtN0bekqbKNkmECIbmB0Eu7uBd4caHIC4LAUgKZX8vVSYicNMkcOc1qaaZatkbtryKae88jmwyzQWEW77etzsBHHb5qtCsWtQDXbC4z--HihzRFNzax-E0saxvHsRTEV_PLCNN_U3ej-eCZ1lQtlWfAKb38DHoYzpCzT9mMGglYWX-B1L_59qM_W0yEt_gGte95KFSZU7ZpuWdM_GHSMv9tAt6GjxZIHlpe7H0CQ8QnFU-sC1NALbMJArkERA6PtegTYmo3HWQ0yv6EqfFwFFuxlcqDZTb0RDalgkRh4mrDkvlYctVDsczzh0Yz4CEtBUM1t5xP1NUZkz4&x-client-SKU=ID_NET8_0&x-client-ver=8.5.0.0
+
+
+any type of redirection from https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=638901451381038935.MDg2ODYxZjMtNTU1Zi00NmY5LTk4NmMtYzFjZGRhM2QxZGIyNDhmMDQ4OTAtZGVlYi00MjI1LWJhN2QtZGQ4ZWRjMDU0Zjc0&ui_locales=en-US&mkt=en-US&client-request-id=17512ed9-3a0f-4a98-9789-48e83a6b6cf0&state=WycbYBoxagMH9SOtrT4UT9-KRRouC0JkIDbQRmctuiuFcIRbWCy2_RLCc-D8_pGwJm1Ql897VQFuvOROcOCX9v74OMrb-5uKmIy9Ovcf7MOHI4gMv3WTw_Jh9PQJZJF3_PX_UVBVaTdURKaMeUNgIriMD3nZ12hTQySz69dGhCBKwpIdfAoeaPqCQej4K3m2nIxqSzrwe0epDzJBXS652ekxAKAJk_AJ82ixsxJF50Qshguk6fr65xHOZFPpD0sjwRXE5x0mfdp2cjiXp5qPjHur_Q2aKx38yoPLrG22cYXZSsOqR1BulCP5JDSudSofGSQCRG63MH0mH5lXjellt3eIjmcR8TzDuAb5pfJC44jLn_LTviKQSvyeWX_qitdtWj9OkEwJU2PO5DqNK_rfUvwGsn05lhUHE77xcXd3Bck&x-client-SKU=ID_NET8_0&x-client-ver=8.5.0.0
+
+
+is valid and should be fast af 
